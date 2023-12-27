@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Signup 1</title>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 32px;
+  background: #f5f5f5;
+  font-family: "Euclid Circular A";
+  animation: rotate 6s infinite alternate linear;
+}
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
+
+.background {
+  position: fixed;
+  top: -50vmin;
+  left: -50vmin;
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+  background: #65c8ff;
+}
+
+.background::after {
+  content: "";
+  position: inherit;
+  right: -50vmin;
+  bottom: -55vmin;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: #143d81;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin: 0 20px;
+  padding: 170px 30px 54px;
+  border-radius: 1.25rem;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -880px;
+  left: 50%;
+  translate: -50% 0;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background: #216ce7;
+}
+
+@media (width >= 500px) {
+  .card {
+    margin: 0;
+    width: 360px;
+  }
+}
+
+.card .logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  translate: -50% 0;
+  width: 150px;
+  height: 100px;
+}
+
+.card > h2 {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0 0 30px;
+  color: #2a3444;
+}
+
+.form {
+  margin: 0 0 36px;
+  display: grid;
+  gap: 16px;
+}
+
+.form > input,
+.form > button {
+  width: 100%;
+  height: 56px;
+  border-radius: 28px;
+}
+
+.form > input {
+  border: 2px solid #ebebeb;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 0 24px;
+  color: #11274c;
+}
+
+.form > input::placeholder {
+  color: #cac8c8;
+}
+
+.form > button {
+  cursor: pointer;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  background: #216ce7;
+  color: #f9f9f9;
+  border: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: all 0.375s;
+}
+
+.card > footer {
+  color: #a1a1a1;
+}
+
+.card > footer > a {
+  color: #216ce7;
+}
+    </style>
+     <script>
+      function validation() {
+        event.preventDefault();
+          var f = document.getElementById("f1").value;
+          var l = document.getElementById("l1").value;
+          var e = document.getElementById("e1").value;
+          var pa1 = document.getElementById("p1").value;
+          var pa2 = document.getElementById("p2").value;
+  
+          if (f.length == 0 || l.length == 0 || e.length == 0 || pa1.length == 0 || pa2.length == 0) {
+              alert("Fill all fields");
+          } else {
+              localStorage.setItem('email', e);
+              localStorage.setItem('pwd', pa1);
+  
+              if (pa1 == pa2) {
+                  alert("Registered successfully");
+                  window.location.href = "login.html"; // Redirect to login page after successful registration
+              } else {
+                  alert("Both passwords should match");
+              }
+          }
+          return false; // Prevent default form submission
+      }
+  </script>
+  </head>
+  <body>
+      <div class="background"></div>
+      <div class="card">
+          <img class="logo" src="reallogo.png" />
+          <h2>Create Account</h2>
+          <form class="form" method="post">
+              <input type="text" placeholder="FirstName" id="f1" required />
+              <input type="text" placeholder="LastName" id="l1" required />
+              <input type="email" placeholder="Email" id="e1" required />
+              <input type="password" placeholder="Password" id="p1" required />
+              <input type="password" placeholder="Confirm Password" id="p2" required />
+              <button type="submit" onclick="validation()(event)">SIGN UP</button>
+          </form>
+          <footer>
+              Existing users, sign in
+              <a href="login.html">here</a>
+          </footer>
+      </div>
+  </body>
+  
+  </body>
+</html>

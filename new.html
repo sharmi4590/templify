@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+ </head>
+  <body>
+    
+    <div class="container" id="cv-form">
+      <h1 class="text-center">RESUME BUILDER</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Details required to fill</h3>
+          <div class="form-group">
+            <label for="nameline"><h6>Your Name</h6></label>
+            <input type="text" id="nameline" placeholder="Enter here" class="form-control">
+          </div>
+          <div class="form-group ">
+            <label for="phone"> <h6>Your Phone Number</h6></label>
+            <input type="number" id="phone" placeholder="Enter here" class="form-control">
+          </div>
+          <div class="form-group mt-2">
+            <label for="Address"><h6>Your Address</h6></label>
+            <textarea  id="Address" placeholder="Enter here" class="form-control" rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form-group mt-3">
+            <label for=""><h6>Select Your Profile</h6></label>
+            <input id="imgField" type="file" class="form-control" /> </div>
+            
+          <div class="form-group ">
+            <label for="obj"><h6>Objective</h6></label>
+            <textarea rows="6" id="obj" placeholder="Enter here" class="form-control"
+            ></textarea> 
+          </div>
+<!--lang-->
+          <div class="form-group mt-2" >
+            <label for="lang"><h6>Languages Known</h6></label>
+            <textarea  id="lang" placeholder="Enter here" class="form-control lgField"
+            ></textarea>
+            <!--<div class="container text-right mt-3" id="lang2">
+              <button onclick="Newlang()" class="btn btn-primary btn-sm">Add</button>
+            </div>-->
+          </div>
+<!--skills-->
+          <div class="form-group mt-2" >
+            <label for="skill"><h6>SKILLS</h6></label>
+            <textarea  id="skill" placeholder="Enter here" class="form-control skField"
+            ></textarea>
+            <!--<div class="container text-right mt-3" id="skill2">
+              <button onclick="Newskill()" class="btn btn-primary btn-sm">Add</button>
+            </div>-->
+          </div>
+
+
+          
+        </div>
+      
+        <div class="col-md-6">
+           
+
+            <h5 class="text-terinary my-3">Important Links</h5>
+          <div class="form-group">
+            <label for="fblink">Facebook</label>
+            <input type="text" id="fblink" placeholder="Enter here" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="insta">Instagram</label>
+            <input type="text" id="insta" placeholder="Enter here" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="linkedlin">Linkedin</label>
+            <input type="text" id="linkedin" placeholder="Enter here" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="github">Github</label>
+            <input type="text" id="github" placeholder="Enter here" class="form-control">
+          </div>
+
+            <div class="form-group mt-2" id="edu1">
+                <label for=""><h6>EDUCATION DETAILS</h6></label>
+                <textarea  
+                placeholder="Enter here" 
+                class="form-control eduField" 
+                rows="3"
+                ></textarea>
+  
+                <div class="container text-center mt-3" id="edu2">
+                  <button onclick="NewEdup()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+              </div>
+            
+            <div class="form-group mt-2" id="we1">
+              <label for=""><h6>PROFESSIONAL EXPERIENCE</h6></label>
+              <textarea  
+               placeholder="Enter here" 
+               class="form-control wepField"
+               rows="4"
+              ></textarea>
+
+              <div class="container text-center mt-3" id="we2">
+                <button onclick="NewWorkep()" class="btn btn-primary btn-sm">Add</button>
+              </div>
+            </div>
+        
+            <div class="form-group mt-2" id="vol1">
+              <label for="vol"><h6>VOLUNTEER</h6></label>
+              <textarea 
+               placeholder="Enter here"
+                class="form-control volField" 
+                rows="4"
+              ></textarea>
+              <div class="container text-center mt-3" id="vol">
+                <button onclick="Newvol()" class="btn btn-primary btn-sm">Add</button>
+              </div>
+            </div>
+        </div>
+      </div>
+     <div class="container text-center" >
+        
+      <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        
+  
+      </div>
+        </div>
+    </div>
+
+    <!--newfeild-->
+
+    <div class="container " id="cv-template">
+      
+        <div class="row">
+          <div class="col-md-4 text-center py-5 background fun ">
+            <img src="https://www.clipartkey.com/mpngs/m/146-1461473_default-profile-picture-transparent.png" alt="" width="190px" height="200px"
+            class="img-fluid bin" id="imgTemplate" />
+            <div class="container">
+                <h3>CONTACT </h3> 
+           <br>
+           
+              <p id="nameT">  ffg gng <br></p> 
+              <p id="contactT"> cngng  <br></p> 
+              <p id="addressT">  ncnfjf  <br></p>  
+
+             <br>
+             <br>
+                  <h4 >objective <br></h4>
+                  <p id="objT"> hi hlo   ncfkv  cjvnv    mvnv 
+                  </p>
+                <!--lang-->
+                       <br>
+                       <br>
+                <h4>Languages Known <br></h4>
+                <p id="langT"> telugu
+                  english
+                  hindi
+                </p>
+                <br>
+                <br>
+                
+             <!--skills-->
+            
+                  <h4>SKILLS <br></h4>
+                <p id="skillT"> tech
+                  phy
+                  code
+                </p>
+        <br>
+            </div>
+  
+          </div>
+          <div class="col-md-8 py-5 age double ">
+            <h1 id="nameT1" class="text-center col8" >your name</h1>
+           <!--educa-->
+
+           <div class="card mt-4">
+            <div class="card-header" style="background-color: rgb(240, 252, 252);">
+              <h3 >EDUCATION</h3></style>
+            </div>
+            <div class="card-body age">
+            <ul id="eduT">
+              <li>yyyyyyyyyy
+                kcjkdhufhfb
+              </li>
+            </ul>
+            
+            </div>
+          </div>
+  <!--workexp-->
+  <div class="card mt-4">
+    <div class="card-header" style="background-color: rgb(240, 252, 252);">
+      <h3 >PROFESSIONAL EXPERIENCE </h3></style>
+    </div>
+    <div class="card-body age">
+    <ul id="wexpT">
+      <li>yyyyyyyyyy
+        kcjkdhufhfb
+      </li>
+    </ul>
+   
+    </div>
+  </div>
+            <!--VOLUc-->
+            <div class="card mt-4">
+              <div class="card-header" style="background-color: rgb(240, 252, 252);">
+                <h3 >VOLUNTEER</h3></style>
+              </div>
+              <div class="card-body age">
+              <ul id="volT">
+                <li>yyyyyyyyyy
+                  kcjkdhufhfb
+                </li>
+              </ul>
+              
+              </div>
+            </div>
+  <!--links-->
+  <br>
+  <h5> Fblink: </h5><p id="fbT"><a href="**"> www.fb.com </a></p>
+  <h5> instalink: </h5> <p id="insT"><a href="**">www.in.com</a></p>
+  <h5> linkedinURL: </h5><p id="lnT"><a href="**">www.ln.com</a></p>
+  <h5> githuhURL: </h5><p id="gitT"><a href="**">www.git.com</a></p>
+  
+
+            <div class="container mt-3 text-center">
+              <button onclick="printCV()"class="btn " style="background-color:rgb(240, 252, 252);">
+                Your Resume</style>
+              </button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <script src="script.js"></script>
+     <!-- <script>
+        var btn = document.querySelector("button");
+        btn.onclick=() =>{
+          window.print();
+        }
+      --></script>
+  
+     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+     --></body>
+  </html>

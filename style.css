@@ -1,0 +1,36 @@
+#cv-template{
+    display:none;
+}
+/*.myimg{
+   
+    border-radius: 51%;
+    width:230px;
+
+}*/
+.age{
+    background-color: rgb(142, 228, 244);
+}
+.background{
+    background-color:  rgb(255,255,255);
+}
+.col8{
+    
+   
+    font-size: 50px;
+}
+.bin{
+    
+    border-radius:50%;
+    
+    
+    
+}
+.fun{
+    border-style: ridge;
+    border-color: rgb(251, 253, 254);
+}
+
+.double {
+    border-style: hidden;
+    border-color: rgb(251, 253, 254);
+}

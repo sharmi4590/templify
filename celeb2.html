@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Invitation</title>
+  <style>
+    /* Add your custom CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Event Invitation</h1>
+  
+  <form id="invitation-form">
+    <label for="event-name">Event Name:</label>
+    <input type="text" id="event-name" name="event-name" required><br>
+
+    <label for="event-date">Event Date:</label>
+    <input type="date" id="event-date" name="event-date" required><br>
+
+    <label for="event-time">Event Time:</label>
+    <input type="time" id="event-time" name="event-time" required><br>
+
+    <label for="guest-name">Guest Name:</label>
+    <input type="text" id="guest-name" name="guest-name" required><br>
+
+    <label for="guest-email">Guest Email:</label>
+    <input type="email" id="guest-email" name="guest-email" required><br>
+
+    <input type="submit" value="Send Invitation">
+  </form>
+
+  <script>
+    document.getElementById('invitation-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      var eventName = document.getElementById('event-name').value;
+      var eventDate = document.getElementById('event-date').value;
+      var eventTime = document.getElementById('event-time').value;
+      var guestName = document.getElementById('guest-name').value;
+      var guestEmail = document.getElementById('guest-email').value;
+
+      // You can implement your own logic here to send the invitation via email or perform any other action
+      // For demonstration purposes, we'll simply log the invitation details to the console
+      console.log('Event Name:', eventName);
+      console.log('Event Date:', eventDate);
+      console.log('Event Time:', eventTime);
+      console.log('Guest Name:', guestName);
+      console.log('Guest Email:', guestEmail);
+
+      // Optionally, you can display a success message or redirect to a thank you page
+    });
+  </script>
+</body>
+</html>
